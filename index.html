@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imagining War: The Art and Literature of Conflict Timeline</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.css" rel="stylesheet" type="text/css" />
+    <style>
+        body { font-family: Arial, sans-serif; }
+        #timeline { width: 100%; height: 400px; border: 1px solid lightgray; }
+        .controls { margin: 10px 0; text-align: center; }
+        .control-button { margin: 5px; padding: 8px 16px; }
+        #details { margin-top: 20px; }
+
+        .film { background-color: lightgray; }
+        .event { background-color: lightseagreen; }
+        .novel { background-color: lightcoral; }
+        .poetry { background-color: lightblue; }
+        .news { background-color: lightgreen; }
+        .other { background-color: lightyellow; }
+
+        .highlight { border: 2px solid gold; }
+    </style>
+</head>
+<body>
+    <h1>Imagining War: The Art and Literature of Conflict Timeline</h1>
+    <div class="controls">
+        <button id="filter-all" class="control-button">All</button>
+        <button id="filter-events" class="control-button">Events</button>
+        <button id="filter-film" class="control-button">Film</button>
+        <button id="filter-novel" class="control-button">Novel</button>
+        <button id="filter-poetry" class="control-button">Poetry</button>
+        <button id="filter-news" class="control-button">News</button>
+        <button id="filter-other" class="control-button">Other</button>
+    </div>
+    <div id="timeline"></div>
+    <div id="details">
+        <h2>Details</h2>
+        <div id="details-content">Click on the timeline to see more details.</div>
+    </div>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.js"></script>
+    <script type="text/javascript" src="./script.js"></script>
+</body>
+</html>
