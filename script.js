@@ -11,10 +11,32 @@ document.addEventListener('DOMContentLoaded', function () {
         { id: 9, title: "Afghanistan War", type: "event", start: "2001-10-07", end: "2021-08-30", description: "Afghanistan War" },
         { id: 10, title: "Iraq War", type: "event", start: "2003-03-20", end: "2011-12-15", description: "Iraq War" },
 
+        //seminar 1
         { id: 11, title: "Henry V", type: "other", start: "1599-12-12", description: "Play by William Shakespeare, first performed in 1599 and published in 1600, day published unkown", relatedEvents: [1, 2] },
-        { id: 12, title: "Fears in Solitude", type: "poetry", start: "1798-04-01", description: "Poem by Samuel Taylor Coleridge, day published unkown", relatedEvents: []},
-        { id: 13, title: "Ulysses", type: "poetry", start: "1842-01-01", description: "Poem by Alfred, Lord Tennyson", relatedEvents: []},
-        { id: 14, title: "The Charge of the Light Brigade", type: "poetry", start: "1854-12-09", description: "Poem by Alfred, Lord Tennyson", relatedEvents: [3]},
+        
+        //seminar 2
+        //{ id: 12, title: "Fears in Solitude", type: "poetry", start: "1798-04-01", description: "Poem by Samuel Taylor Coleridge, day published unkown", relatedEvents: []},
+        //{ id: 14, title: "‘Sonnets Dedicated to Liberty’, ‘Character of the Happy Warrior’, ‘Composed in Recollection of the Expedition of the French into Russia’, ‘Inscription for a National Monument’", type: "poetry", start: "1854-12-09", description: "William Wordsworth", relatedEvents: []}, 
+        //{ id: 13, title: "Ulysses", type: "poetry", start: "1842-01-01", description: "Poem by Alfred, Lord Tennyson", relatedEvents: []},
+        { id: 12, title: "The Charge of the Light Brigade", type: "poetry", start: "1854-12-09", description: "Poem by Alfred, Lord Tennyson", relatedEvents: [3]},
+        //{ id: 14, title: "Emily Dickinson’s Poems: As She Preserved Them", type: "poetry", start: "1854-12-09", description: "Emily Dickinson", relatedEvents: [3]},
+        //{ id: 14, title: "‘Beat! Beat! Drums!’ (1861), ‘Come up from the Fields Father’ (1865), ‘Vigil Strange I Kept on the Field one Night’ (1865), ‘The Wound-Dresser’ (1876), ‘Reconciliation’ (1866)", type: "poetry", start: "1854-12-09", description: "Walt Whitman", relatedEvents: []},
+        //{ id: 14, title: "‘Embarcation’, ‘The Colonel’s Soliloquy’, ‘Drummer Hodge’, ‘A Wife in London’ (1899), ‘The Man He Killed’ (1902)", type: "poetry", start: "1854-12-09", description: "Thomas Hardy", relatedEvents: []},
+        
+        //seminar 3
+
+        //seminar 4
+        { id: 13, title: "The Blind Man", type: "other", start: "1922-10-24", description: "Short Story by D.H. Lawrence", relatedEvents: [4]},
+        { id: 14, title: "Mrs Dalloway", type: "novel", start: "1925-05-14", description: "Novel by Virginia Woolf", relatedEvents: [4]},
+        { id: 15, title: "Across the Black Water", type: "novel", start: "1939-01-01", description: "Novel by Mulk Raj Anand, month day plushed unknown", relatedEvents: [4]},
+
+        //seminar 5
+
+        //seminar 6
+        { id: 16, title: "High Explosive for Everyone", type: "news", start: "1937-07-01", description: "Martha Gellhorn", relatedEvents: [5]},
+        { id: 17, title: "The Bomber Boys", type: "news", start: "1943-01-01", description: "Martha Gellhorn", relatedEvents: [6]},
+        { id: 18, title: "A New Kind of War", type: "news", start: "1966-01-01", description: "Martha Gellhorn", relatedEvents: [7]},
+        { id: 19, title: "Real War and the War of Words", type: "news", start: "1959-01-01", description: "Martha Gellhorn", relatedEvents: []},
     ];
 
     const eventToRelatedItems = {};
