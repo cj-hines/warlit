@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function () {
     const warData = [
-        { id: 1, title: "The Hundred Years' War", type: "event", start: "1337-05-24", end: "1453-10-19", description: "England v. France" },
-        { id: 2, title: "Battle of Agincourt", type: "event", start: "1415-10-25", description: "English victory" },
+        { id: 1, title: "The Hundred Years' War", type: "event", start: "1337-05-24", end: "1453-10-19", description: "(Lecture 2) The Hundred Years’ War was a 100+ year-long intermittent struggle between England and France in the 14th–15th century over a series of disputes, including the question of the legitimate succession to the French crown. By convention the war is said to have started with the confiscation of the English-held duchy of Guyenne by French King Philip VI. This confiscation, however, had been preceded by periodic fighting over the question of English fiefs in France going back to the 12th century. (Britannica)" },
+        { id: 2, title: "Battle of Agincourt", type: "event", start: "1415-10-25", description: "(Lecture 2) The Battle of Agincourt was a decisive battle in the Hundred Years’ War that resulted in an English victory. The English army, led by King Henry V, famously achieved victory in spite of the numerical superiority of the French, in part from the use of the English longbow in large numbers. (Britannica)" },
         { id: 3, title: "Crimean War", type: "event", start: "1853-10-05", end: "1856-03-30", description: "The Crimean War was fought between the Russian Empire and an ultimately victorious alliance of the Ottoman Empire, France, the United Kingdom, and Sardinia-Piedmont." },
         { id: 4, title: "World War I", type: "event", start: "1914-07-28", end: "1918-11-11", description: "The First World War, also known as The Great War" },
         { id: 5, title: "Spanish Civil War", type: "event", start: "1936-07-17", end: "1939-04-01", description: "The bloodiest conflict western Europe had experienced since the end of World War I in 1918" },
@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function () {
         { id: 9, title: "Afghanistan War", type: "event", start: "2001-10-07", end: "2021-08-30", description: "Afghanistan War" },
         { id: 10, title: "Iraq War", type: "event", start: "2003-03-20", end: "2011-12-15", description: "Iraq War" },
 
-        { id: 11, title: "`Henry V` by William Shakespeare", type: "other", start: "1599-12-12", description: "Play by William Shakespeare, first performed in 1599 and published in 1600, day published unkown", relatedEvents: [1, 2] },
+        { id: 11, title: "Henry V", type: "other", start: "1599-12-12", description: "Play by William Shakespeare, first performed in 1599 and published in 1600, day published unkown", relatedEvents: [1, 2] },
         { id: 12, title: "Fears in Solitude", type: "poetry", start: "1798-04-01", description: "Poem by Samuel Taylor Coleridge, day published unkown", relatedEvents: []},
         { id: 13, title: "Ulysses", type: "poetry", start: "1842-01-01", description: "Poem by Alfred, Lord Tennyson", relatedEvents: []},
         { id: 14, title: "The Charge of the Light Brigade", type: "poetry", start: "1854-12-09", description: "Poem by Alfred, Lord Tennyson", relatedEvents: [3]},
