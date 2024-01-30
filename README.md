@@ -1,4 +1,4 @@
-# warlit-nlp
+# warlit
 Plots war literature and war events on a timeline. Shows relationships between war literature and events.
 
 ## Notes
