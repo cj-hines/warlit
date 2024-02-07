@@ -64,7 +64,6 @@ document.addEventListener('DOMContentLoaded', function () {
         type: 'box',
         className: entry.type 
     })));
-
     const options = {};
     const container = document.getElementById('timeline');
     const timeline = new vis.Timeline(container, items, options);
@@ -78,52 +77,69 @@ document.addEventListener('DOMContentLoaded', function () {
     document.getElementById('filter-other').addEventListener('click', () => filterData('other'));
 
     function filterData(filterType) {
-      const filteredItems = warData.filter(item => filterType === 'all' || item.type === filterType).map(entry => ({
-        id: entry.id,
-        start: entry.start,
-        end: entry.end || null,
-        content: entry.title,
-        type: 'box',
-        className: entry.type
-      }));
-      timeline.setItems(new vis.DataSet(filteredItems));
+        const filteredItems = warData.filter(item => filterType === 'all' || item.type === filterType).map(entry => ({
+            id: entry.id,
+            start: entry.start,
+            end: entry.end || null,
+            content: entry.title,
+            type: 'box',
+            className: entry.type
+        }));
+        timeline.setItems(new vis.DataSet(filteredItems));
     }
 
     timeline.on('select', function (properties) {
         const selectedId = properties.items[0];
         const selectedItem = warData.find(item => item.id === selectedId);
-
         clearHighlights();
-
         if (selectedItem) {
-          let detailsHTML = `
-              <strong>${selectedItem.title}</strong>
-              <p>Date: ${selectedItem.start}${selectedItem.end ? ' to ' + selectedItem.end : ''}</p>
-              <p>Description: ${selectedItem.description}</p>
-          `;
-
-          document.getElementById('details-content').innerHTML = detailsHTML;
-
-          //console.log('DEBUG - selectedItem.title:', selectedItem.title);
-          //console.log('DEBUG - eventToRelatedItems:', eventToRelatedItems);
-          //console.log('DEBUG - eventToRelatedItems[selectedId]:', eventToRelatedItems[selectedId]);
-
-          if (selectedItem.type === 'event' && eventToRelatedItems[selectedId]) {
-            highlightFromEvent(selectedId);
-          } else if ((selectedItem.type === 'film' || selectedItem.type === 'novel' || selectedItem.type === 'poetry' || selectedItem.type === 'news' || selectedItem.type === 'other') && selectedItem.relatedEvents) {
-            highlightRelatedEvents(selectedItem.relatedEvents);
-          }
-        } 
+            let detailsHTML = `
+                <strong>${selectedItem.title}</strong>
+                <p>Date: ${selectedItem.start}${selectedItem.end ? ' to ' + selectedItem.end : ''}</p>
+                <p>Description: ${selectedItem.description}</p>
+            `;
+            document.getElementById('details-content').innerHTML = detailsHTML;
+            if (selectedItem.type === 'event' && eventToRelatedItems[selectedId]) {
+                highlightFromEvent(selectedId);
+            } else if (selectedItem.relatedEvents) {
+                highlightRelatedEvents(selectedItem.relatedEvents);
+            }
+        }
     });
 
-    function clearHighlights() {
-      updateTimelineItems(warData.map(entry => ({
-        ...entry,
-        className: entry.type
-      })));
+    document.getElementById('searchInput').addEventListener('input', function (e) {
+        const searchTerm = e.target.value.toLowerCase();
+        filterDataBySearchTerm(searchTerm);
+    });
+
+    document.getElementById('searchButton').addEventListener('click', function () {
+        const searchTerm = document.getElementById('searchInput').value.toLowerCase();
+        filterDataBySearchTerm(searchTerm);
+    });
+
+    function filterDataBySearchTerm(searchTerm) {
+        const filteredItems = warData.filter(item => 
+            item.title.toLowerCase().includes(searchTerm) || 
+            (item.description && item.description.toLowerCase().includes(searchTerm))
+        ).map(entry => ({
+            id: entry.id,
+            start: entry.start,
+            end: entry.end || null,
+            content: entry.title,
+            type: 'box',
+            className: entry.type
+        }));
+        timeline.setItems(new vis.DataSet(filteredItems));
     }
 
-     function highlightRelatedEvents(relatedEventIds) {
+    function clearHighlights() {
+        updateTimelineItems(warData.map(entry => ({
+            ...entry,
+            className: entry.type
+        })));
+    }
+
+    function highlightRelatedEvents(relatedEventIds) {
         const highlightClass = 'highlight';
         updateTimelineItems(warData.map(entry => ({
             ...entry,

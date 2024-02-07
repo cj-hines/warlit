@@ -20,6 +20,21 @@
         .other { background-color: lightyellow; }
 
         .highlight { border: 2px solid gold; }
+
+        #searchContainer {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        #searchInput {
+            padding: 8px;
+            width: 20%;
+            margin-right: 5px;
+        }
+
+        #searchButton {
+            padding: 8px;
+        }
     </style>
 </head>
 <body>
@@ -27,7 +42,13 @@
     <p> "Every war story, according to Leo Tolstoy, begins with the disclaimer that war cannot be understood by those who have not witnessed it for themselves – yet the story is always told anyway."
         <br>
         <br>
-    This tool provides details on war literature's themes (memorialization of past wars, anticipation of future ones), tropes (the soldier’s departure and homecoming, the horror of battle, eyewitnesses who did not fight), and narrative forms (poetry, novels, narrative journalism). Click an event or text on the timeline for more information, and related events or text will be highlighted yellow if there are related ones. MORE NOTES TO BE ADDED. </p>
+    This tool provides details on war literature's themes (memorialization of past wars, anticipation of future ones), tropes (the soldier’s departure and homecoming, the horror of battle, eyewitnesses who did not fight), and narrative forms (poetry, novels, narrative journalism). Click an event/text on the timeline for more information, and related events or texts will be highlighted yellow if there are related ones. Currently under construction :) </p>
+
+    <div id="searchContainer" style="text-align:center; margin-bottom: 20px;">
+    <input type="text" id="searchInput" placeholder="type type some war lit stuff or history stuff..." style="padding: 8px; width: 20%;">
+    <button id="searchButton" style="padding: 8px;">Search</button>
+    </div>
+
     <div class="controls">
         <button id="filter-all" class="control-button">All</button>
         <button id="filter-events" class="control-button">Events</button>
