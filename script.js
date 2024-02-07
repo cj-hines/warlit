@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function () {
     const warData = [
-        { id: 1, title: "The Hundred Years' War", type: "event", start: "1337-05-24", end: "1453-10-19", description: "(Lecture 2) The Hundred Years’ War was a 100+ year-long intermittent struggle between England and France in the 14th–15th century over a series of disputes, including the question of the legitimate succession to the French crown. By convention the war is said to have started with the confiscation of the English-held duchy of Guyenne by French King Philip VI. This confiscation, however, had been preceded by periodic fighting over the question of English fiefs in France going back to the 12th century. (Britannica)" },
-        { id: 2, title: "Battle of Agincourt", type: "event", start: "1415-10-25", description: "(Lecture 2) The Battle of Agincourt was a decisive battle in the Hundred Years’ War that resulted in an English victory. The English army, led by King Henry V, famously achieved victory in spite of the numerical superiority of the French, in part from the use of the English longbow in large numbers. (Britannica)" },
+        { id: 1, title: "The Hundred Years' War", type: "event", start: "1337-05-24", end: "1453-10-19", description: "Notes to be added. The Hundred Years’ War was a 100+ year-long intermittent struggle between England and France in the 14th–15th century over a series of disputes, including the question of the legitimate succession to the French crown. By convention the war is said to have started with the confiscation of the English-held duchy of Guyenne by French King Philip VI. This confiscation, however, had been preceded by periodic fighting over the question of English fiefs in France going back to the 12th century. (Britannica)" },
+        { id: 2, title: "Battle of Agincourt", type: "event", start: "1415-10-25", description: "The Battle of Agincourt was a decisive battle in the Hundred Years’ War that resulted in an English victory. The English army, led by King Henry V, famously achieved victory in spite of the numerical superiority of the French, in part from the use of the English longbow in large numbers. (Britannica)" },
         { id: 3, title: "Crimean War", type: "event", start: "1853-10-05", end: "1856-03-30", description: "The Crimean War was fought between the Russian Empire and an ultimately victorious alliance of the Ottoman Empire, France, the United Kingdom, and Sardinia-Piedmont." },
         { id: 4, title: "World War I", type: "event", start: "1914-07-28", end: "1918-11-11", description: "The First World War" },
         { id: 5, title: "Spanish Civil War", type: "event", start: "1936-07-17", end: "1939-04-01", description: "The bloodiest conflict western Europe had experienced since the end of World War I" },
@@ -37,8 +37,13 @@ document.addEventListener('DOMContentLoaded', function () {
         { id: 17, title: "The Bomber Boys", type: "news", start: "1943-01-01", description: "Martha Gellhorn", relatedEvents: [6]},
         { id: 18, title: "A New Kind of War", type: "news", start: "1966-01-01", description: "Martha Gellhorn", relatedEvents: [7]},
         { id: 19, title: "Real War and the War of Words", type: "news", start: "1959-01-01", description: "Martha Gellhorn", relatedEvents: []},
+
+        //seminar 7
+
+        //seminar 8
     ];
 
+    //relation
     const eventToRelatedItems = {};
     warData.forEach(item => {
         if (item.type !== 'event' && item.relatedEvents) {
