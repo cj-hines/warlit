@@ -1,0 +1,68 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+body {
+  font-family: "Raleway", sans-serif;
+  padding: 20px;
+}
+
+#timeline {
+  width: 100%;
+  height: 100%;
+  border: 1px solid lightgray;
+}
+
+.controls {
+  margin: 10px 0;
+  text-align: center;
+}
+
+.control-button {
+  margin: 5px;
+  padding: 8px 16px;
+}
+
+#details {
+  margin-top: 20px;
+}
+
+.film {
+  background-color: lightgray;
+}
+
+.event {
+  background-color: lightseagreen;
+}
+
+.novel {
+  background-color: lightcoral;
+}
+
+.poetry {
+  background-color: lightblue;
+}
+
+.news {
+  background-color: lightgreen;
+}
+
+.other {
+  background-color: lightyellow;
+}
+
+.highlight {
+  border: 2px solid gold;
+}
+
+#searchInput {
+  padding: 8px;
+  width: 20%;
+  margin-right: 5px;
+}
+
+#foot {
+  padding-bottom: 30px !important;
+  padding-top: 30px !important;
+  font-size: 65%;
+}
